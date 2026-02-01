@@ -1,0 +1,17 @@
+[Unit]
+Description=Dog X-Ray Chromium Kiosk
+After=graphical.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=petvet
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/petvet/.Xauthority
+WorkingDirectory=/home/petvet
+ExecStart=/bin/bash -lc 'exec /usr/bin/chromium --kiosk --incognito --noerrdialogs --disable-infobars --disable-pinch --overscroll-history-navigation=0 http://127.0.0.1:3000'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=graphical.target

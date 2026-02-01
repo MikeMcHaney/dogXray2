@@ -1,0 +1,112 @@
+######################################
+# OS / Editor junk
+######################################
+
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+._*
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+######################################
+# Node.js
+######################################
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build / cache
+dist/
+build/
+.cache/
+.eslintcache
+
+######################################
+# Python
+######################################
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.venv/
+venv/
+ENV/
+env/
+
+######################################
+# Raspberry Pi / system artifacts
+######################################
+
+# systemd copies (real ones live in /etc/systemd)
+deploy/*.service~
+
+# Runtime state
+*.pid
+*.sock
+
+######################################
+# Kiosk / browser state
+######################################
+
+# Chromium creates these if run as kiosk
+.config/chromium/
+.cache/chromium/
+
+######################################
+# Assets & data
+######################################
+
+# If you ever regenerate assets or thumbnails
+*.tmp
+*.bak
+
+# Optional: ignore large original source images if you keep exports only
+# assets/originals/
+
+######################################
+# Secrets / environment
+######################################
+
+.env
+.env.*
+!.env.example
+
+######################################
+# Local install / recovery artifacts
+######################################
+
+# SD card images, backups, recovery zips
+*.img
+*.iso
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+######################################
+# Logs from services
+######################################
+
+logs/
+*.log
+
+######################################
+# Testing artifacts
+######################################
+
+coverage/
+.nyc_output/

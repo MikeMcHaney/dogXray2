@@ -1,0 +1,15 @@
+[Unit]
+Description=Dog X-Ray GPIO Bridge
+After=dogxray-server.service
+Requires=dogxray-server.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/dogxray2/gpio
+ExecStart=/usr/bin/python3 /home/pi/dogxray2/gpio/gpio_bridge.py
+Restart=always
+RestartSec=2
+User=pi
+
+[Install]
+WantedBy=multi-user.target

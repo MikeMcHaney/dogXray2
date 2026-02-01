@@ -1,0 +1,16 @@
+[Unit]
+Description=Dog X-Ray Exhibit Server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/dogxray2/server
+ExecStart=/usr/bin/node /home/pi/dogxray2/server/server.js
+Restart=always
+RestartSec=2
+Environment=NODE_ENV=production
+Environment=PORT=3000
+User=pi
+
+[Install]
+WantedBy=multi-user.target
